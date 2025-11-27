@@ -2,10 +2,12 @@ import React from 'react';
 import '/src/App.css';
 
 const SplashScreen = () => {
-  return (
+  return (<>
     <div className="splash-wrapper">
-      <img src="/images/loader.gif" alt="Game Logo" className="splash-logo" />
+      <img src="/images/tenor-unscreen.gif" alt="Game Logo" className="splash-logo" />
     </div>
+    
+    </>
   );
 };
 
