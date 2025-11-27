@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="is-mobile standart">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Dice">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Dice</title>
+</head>
+<body>
+    <div id="root" class="root">
+        <div class="mobile-wr">
+            <div class="top-mobile-wr">
+                <div class="top-row">
+                    <div class="top-row-min-max-block ">
+                        <div class="user-content">
+                            <div class="logo-img">Logo</div>
+                            <div class="user-info">
+                                <div class="user-balance-amount" title="500,000">500,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-row-icon-block ">
+                        <div class="top-row-icon-block-inner right">
+                            <div class="user-profile default">
+                                <div class="user-profile-action"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-mobile-wr">
+                <div class="inside-inner-wrapper">
+                    <div class="top-inside-inner-wrapper">
+                        <div class="view-select-tabs">
+                            <div class="view-select-tab active" data-tab="Result">
+                                <div class="view-select-tab-inner">
+                                    <p class="view-select-tab-txt">Result</p>
+                                </div>
+                            </div>
+                            <div class="view-select-tab " data-tab="Statistics">
+                                <div class="view-select-tab-inner">
+                                    <p class="view-select-tab-txt">Statistics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-inside-inner-wrapper">
+                        <div class="lists-wrapper active" id="Result">
+                            <div class="top-of-lists-wrapper">
+                                <div class="lists-title-row">
+                                    <div class="lists-title-row-item">
+                                        <p class="lists-title-row-item-txt" title="Round ID">Round ID</p>
+                                    </div>
+                                    <div class="lists-title-row-item">
+                                        <p class="lists-title-row-item-txt"></p>
+                                    </div>
+                                    <div class="lists-title-row-item">
+                                        <p class="lists-title-row-item-txt" title="Check">Check</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-of-lists-wrapper">
+                                <div class="scrollable-container">
+                                    <div class="list-item-rows-container ">
+                                        <div class="list-item-row-component " name="24009580">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009580">24009580</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="Soon">Soon</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009577">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009577">24009577</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="Soon">Soon</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009574">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009574">24009574</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="Soon">Soon</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009572">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009572">24009572</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="Soon">Soon</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009569">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009569">24009569</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="Soon">Soon</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009566">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009566">24009566</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="saving for-round_loader" title=""><span>●</span><span>●</span><span>●</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009563">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009563">24009563</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="21">21</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009560">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009560">24009560</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="25">25</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009558">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009558">24009558</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="38">38</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009555">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009555">24009555</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="44">44</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009552">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009552">24009552</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="96">96</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009549">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009549">24009549</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="52">52</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009546">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009546">24009546</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="49">49</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009543">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009543">24009543</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="53">53</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009541">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009541">24009541</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="41">41</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component " name="24009538">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="24009538">24009538</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt no-text-transform" title="57">57</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item"><img class="list-checked-img cursor-p" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAYAAAA2Lt7lAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARBSURBVHgBzVY9bFxFEP7m3cNSCiQ3iajwCygSpMA2BRI02HR0oaMitoSoUHwdEo3vREKUiMJOjZRzSRVTUTopaGhyRkIKiSK/jkg0Z4XA/bzdYWZn992L7ViXLk96vre7M9988+3OrIFX6bnBaF+V92V8aFbD6xXWkOG2ujDx2reEnVn8slmMrjlsMOi294D3DDj0vpugM4vvqRlc/w+FaylrrIQJwSaSDPTDhr3Kods9g/KlAlz7B0tVC5cywoYM5wOeWHL4JQ7QHGLFT/QcTg5Em8Iyr1CIc4E5LJLHkqiwQjG+sqWgu37KXwkQcVGPxUTtMlCfW3zXjXEvJwyE4IA6T2O+SFkH1EZ+gTHVa2EgqJoO1cJFb6boXSuTs3s+Iw4Mo41XYKY6nMlENQOVi4NNpCVjb9kk+XKRI6Zo3Mkz1VvYoB3JhzEbsAkXZdRlYiOTBFCmmoFNNhIzgETbAkadiNOcbThMqpC1bF9D4phXxo5KOd8BUIPpNzsBiK93evZ1jW3NE+sc67LjUvza7Hk/zIm/Sq4iRL8yE4OBDMg5mVQge5nrb0JwCsAUArGROBSWn109h23nsB3Wow8iMXISQKKXHBnC1yyCAVvlhmCBloHr/KFU8+r359D/5i8UItCmZWxBNJgox5XHIHeVFAfVx9pOSH2I0vHgtONhUyWB9Ztvot8+kCKscEcwF+pjmvbITkA/E6b7cLJLlTJn1c1YOAyE5b3ITF/LiHlNwHcVfI5oT+YWEbVPsvogkx4qCTABdl1wDKkJMJH+SqzOjQKr8tnRBuc55NG+uWBdNIcw97zohZj5J3lMIvHn0TPs51vnMbjymEpprIUicKoibhWQ/H9YQPfKYzunt97Gti59/TDrjT0+1vMca0PPKFlTsQqUqf6td32Z63Dks11ZbDd1FKP2l4/ywx8vVB0B7qZS/+rha70x4XIoAKtOToGQykL7IPNdycXug1GV/zziDCNJU4LBXsLEtza/+HOuk8D1W+wuB1vXopFvYchmqz5DecesvzIe0w7QaEqfPzizJ+FXrImkVChV8RaZ7Ubqz7USRhqNhqUplT+9Mzwf98qeYZXtSD4rUxdpthSdWeSzhQhlzUJ1N7mb94pScZ3GaPp8+sfrBwJSRKdjFulCqMectpVRT5M/+OXis7eSTd4MIJqvO/DeFFwQ/HQDwVm8AQyQY2mGDKKPWHSbmMeuzI9+n78jrC7xUdZW6w0Zpus2E7pA79f3ButNvPxogH8d1jOiJXEo6jxQ3wbpzuR4vZCdyrAlpWPuHsU78dK/eP+sBFCpaL5hme4DPuKn8Q4rVMsPlgflTAH0ufDb2SXOMzm6mKemNR8zHUivWH30wd/9k3BO/b+ouP9GIX1GglCBdKNN9VKxDloTfFJ++KR8Ecap/9mVy0/KSYbVMagnlUpDbiFUsVSsNMmtp63h+6eB6/M/whDgIp3/j2cAAAAASUVORK5CYII="></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lists-wrapper" id="Statistics">
+                            <div class="top-of-lists-wrapper">
+                                <div class="lists-title-filter-row ">
+                                    <div class="lists-title-row-filter-item">
+                                        <p class="lists-title-row-filter-item-txt" title=""><i class="all-statistics ui-lib-all-sort "></i></p>
+                                    </div>
+                                    <div class="d-f-custom">
+                                        <div class="lists-title-row-item">
+                                            <p class="lists-title-row-item-txt" title="Last Rounds">Last Rounds</p>
+                                        </div>
+                                        <div class="lists-title-row-filter-item active">
+                                            <p class="lists-title-row-filter-item-txt" title="">100</p>
+                                        </div>
+                                        <div class="lists-title-row-filter-item">
+                                            <p class="lists-title-row-filter-item-txt" title="">200</p>
+                                        </div>
+                                        <div class="lists-title-row-filter-item">
+                                            <p class="lists-title-row-filter-item-txt" title="">500</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-of-lists-wrapper">
+                                <div class="scrollable-container">
+                                    <div class="statistics-block">
+                                        <div class="statistics-block-items"><span class="items-number">1</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">2</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">3</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">4</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">5</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">6</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">7</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">8</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">9</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">10</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">11</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">12</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">13</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">14</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">15</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">16</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">17</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">18</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">19</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">20</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">21</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">22</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">23</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">24</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">25</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">26</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">27</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">28</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">29</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">30</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">31</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">32</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">33</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">34</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">35</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">36</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">37</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">38</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">39</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">40</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">41</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">42</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">43</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">44</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">45</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">46</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">47</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">48</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">49</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">50</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">51</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">52</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">53</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">54</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">55</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">56</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">57</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">58</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">59</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">60</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">61</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">62</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">63</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">64</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">65</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">66</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">67</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">68</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">69</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">70</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">71</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 3.2%;"></span></div>
+                                            </div><span class="items-percent">4%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">72</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">73</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">74</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">75</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">76</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">77</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">78</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">79</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">80</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">81</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">82</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">83</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">84</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">85</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">86</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">87</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">88</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">89</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">90</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">91</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">92</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">93</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">94</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                            </div><span class="items-percent">0%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">95</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">96</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                            </div><span class="items-percent">2%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">97</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">98</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                            </div><span class="items-percent">3%</span></div>
+                                        <div class="statistics-block-items"><span class="items-number">99</span>
+                                            <div class="items-loading">
+                                                <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                            </div><span class="items-percent">1%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="core-popup-wr is-small from-left d-none">
+                    <div class="core-popup-wr-inner">
+                        <div class="core-popup-inner-right">
+                            <div class="core-popup-inner-right-content">
+                                <div class="top-core-popup-wr-inner">
+                                    <div class="top-core-popup-wr-inner-row">
+                                        <p class="top-core-popup-wr-inner-row-txt">Round ID: 24009667</p>
+                                    </div>
+                                </div>
+                                <div class="bottom-core-popup-wr-inner">
+                                    <div class="bottom-core-popup-content">
+                                        <div class="scrollable-container">
+                                            <div class="bottom-core-popup-content-block">
+                                                <form class="result-content-b">
+                                                    <div class="res-cont-circle-wrp">
+                                                        <div class="res-cont-circle-holder ">
+                                                            <div class="res-cont-circle-ins">
+                                                                <p class="res-cont-circle-value"></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="res-round-wrp">
+                                                        <div class="res-round">
+                                                            <p class="res-round-p">Check Hash Code</p>
+                                                        </div>
+                                                        <div class="res-r-inp-wrp">
+                                                            <div class="res-r-inp-clm">
+                                                                <input type="text" class="res-r-input" disabled="" placeholder="Key" value="" fdprocessedid="ui9o8b">
+                                                            </div>
+                                                            <div class="res-r-inp-clm">
+                                                                <input type="text" class="res-r-input" disabled="" placeholder="Salt" value="" fdprocessedid="bzdiqi">
+                                                            </div>
+                                                        </div>
+                                                        <div class="res-r-inp-wrp">
+                                                            <div class="res-r-inp-clm">
+                                                                <div class="res-r-inp-copy-icon"><i class="ui-lib-copy"></i></div>
+                                                                <input disabled="" type="text" class="res-r-input" placeholder="Hash Code" value="1973D53D8AF77F4B4CDC741C245897D01C6372FE40463D89597274C4B07406CC44C89A0072B9E566E408235EEE74EE98C4793B141F4BD097B3FD1FF44E6AA770"
+                                                                fdprocessedid="ocw4o">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="res-round-wrp">
+                                                        <div class="res-round">
+                                                            <p class="res-round-p">Check Hash Code</p>
+                                                        </div>
+                                                        <div class="res-r-inp-wrp">
+                                                            <div class="res-r-inp-clm">
+                                                                <input inputmode="none" class="res-r-input" required="" title="Key" placeholder="Key" value="" fdprocessedid="dh4pt">
+                                                            </div>
+                                                            <div class="res-r-inp-clm">
+                                                                <input inputmode="none" class="res-r-input" required="" title="Salt" placeholder="Salt" value="" fdprocessedid="n73woc">
+                                                            </div>
+                                                        </div>
+                                                        <div class="res-r-inp-wrp">
+                                                            <div class="res-r-inp-clm">
+                                                                <input type="text" disabled="" class="res-r-input" title="Hash Code" placeholder="Hash Code" value="" fdprocessedid="keg8hl">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="res-about-wrp">
+                                                        <div class="res-about-wrp-item">
+                                                            <div class="ab-hash-code">
+                                                                <div class="ab-hash-code-item left"><i class="ui-lib-question1"></i></div>
+                                                                <div class="ab-hash-code-item right">
+                                                                    <p class="ab-hash-code-item-p">About Hash Code</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="res-about-btn-wrp">
+                                                            <button type="submit" disabled="" class="btn-check disabled"><span class="btn-check-sp">Check</span></button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-mobile-wr">
+                <div class="mobile-navigation-row ">
+                    <a class="mobile-navigation-row-item" href="index.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/dice-btn-icon.svg" alt="Game"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Game</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item" href="statistics.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-statistics.svg" alt="Statistics"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Statistics</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item" href="bet.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-bet.svg" alt="Bet"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Result</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item active" href="result.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-result-color.svg" alt="Result"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Result</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="info.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-help.svg" alt="Info"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Info</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="numpad-wr-for-outside-click">
+                <div class="numpad-wrapper ">
+                    <div class="numpad-holder">
+                        <div class="num-head-row-holder">
+                            <div class="numb-calculate-container">
+                                <div class="calc-result-numb-row">
+                                    <div class="calc-result-numb-row-bg">
+                                        <div class="num-head-button-top ">
+                                            <div class="num-head-button-inner"><span class="left-button-item">-</span></div>
+                                        </div>
+                                        <div class="middle-container-numb"><span class="money-text"></span></div>
+                                        <div class="num-head-button-top ">
+                                            <div class="num-head-button-inner"><span class="left-button-item">+</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="num-head-button">
+                                <button class="button" fdprocessedid="0u4e1"> OK</button>
+                            </div>
+                        </div>
+                        <div class="num-button-wrapper">
+                            <div class="num-button-holder">
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">1</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">2</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">3</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">4</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">5</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">6</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">7</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">8</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">9</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">.</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">0</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><i class="ui-lib-backspace boxes-icon"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".view-select-tab").click(function () {
+            var tabID = $(this).attr("data-tab");
+
+            // Remove active class from all tabs and content
+            $(".view-select-tab").removeClass("active");
+            $(".lists-wrapper").removeClass("active");
+
+            // Add active class to clicked tab and corresponding content
+            $(this).addClass("active");
+            $("#" + tabID).addClass("active");
+        });
+    });
+</script>
+</html>

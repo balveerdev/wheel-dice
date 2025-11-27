@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="is-mobile standart">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Dice">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Dice</title>
+</head>
+<body>
+    <div id="root" class="root">
+        <div class="mobile-wr">
+            <div class="top-mobile-wr">
+                <div class="top-row">
+                    <div class="top-row-min-max-block ">
+                        <div class="user-content">
+                            <div class="logo-img">Logo</div>
+                            <div class="user-info">
+                                <div class="user-balance-amount" title="500,000">500,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-row-icon-block ">
+                        <div class="top-row-icon-block-inner right">
+                            <div class="user-profile default">
+                                <div class="user-profile-action"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-mobile-wr">
+                <div class="inside-inner-wrapper">
+                    <div class="top-inside-inner-wrapper">
+                        <div class="view-select-tabs">
+                            <div class="view-select-tab active" data-tab="Live-Bets">
+                                <div class="view-select-tab-inner">
+                                    <p class="view-select-tab-txt">Live Bets</p>
+                                </div>
+                            </div>
+                            <div class="view-select-tab " data-tab="History">
+                                <div class="view-select-tab-inner">
+                                    <p class="view-select-tab-txt">History</p>
+                                </div>
+                            </div>
+                            <div class="view-select-tab " data-tab="Top-Winners">
+                                <div class="view-select-tab-inner">
+                                    <p class="view-select-tab-txt">Top Winners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-inside-inner-wrapper">
+                        <div class="lists-wrapper active" id="Live-Bets">
+                            <div class="top-of-lists-wrapper">
+                                <div class="lists-title-row">
+                                    <div class="lists-title-row-item">
+                                        <p class="lists-title-row-item-txt" title="Player ID">Player ID</p>
+                                    </div>
+                                    <div class="lists-title-row-item">
+                                        <p class="lists-title-row-item-txt" title="Bet (Fun)">Bet (Fun)</p>
+                                    </div>
+                                    <div class="lists-title-row-item">
+                                        <p class="lists-title-row-item-txt" title="Bet Type">Bet Type</p>
+                                    </div>
+                                    <div class="lists-title-row-item">
+                                        <p class="lists-title-row-item-txt" title="Win (Fun)">Win (Fun)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-of-lists-wrapper">
+                                <div class="scrollable-container">
+                                    <div class="list-item-rows-container ">
+                                        <div class="list-item-row-component ">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="5****3">5****3</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="1.87">1.87</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="40-100">40-100</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="...">...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="5****0">5****0</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="0.93">0.93</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="31-100">31-100</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="...">...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="5****0">5****0</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="0.93">0.93</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="41-100">41-100</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="...">...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="5****0">5****0</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="0.93">0.93</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="53-100">53-100</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="...">...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="1****3">1****3</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="0.54">0.54</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="17-42">17-42</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="...">...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="lists-item-row have-hover">
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="1****3">1****3</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="0.54">0.54</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="75-89">75-89</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="lists-item-row-item">
+                                                    <div class="inner-lists-item-row-item">
+                                                        <p class="inner-lists-item-row-item-txt" title="...">...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lists-wrapper history" id="History">
+                            <div class="top-of-lists-wrapper">
+                                <div class="lists-title-filter-row ">
+                                    <div class="lists-title-row-filter-item active">
+                                        <p class="lists-title-row-filter-item-txt" title="All">All</p>
+                                    </div>
+                                    <div class="lists-title-row-filter-item">
+                                        <p class="lists-title-row-filter-item-txt" title="Win">Win</p>
+                                    </div>
+                                    <div class="lists-title-row-filter-item">
+                                        <p class="lists-title-row-filter-item-txt" title="Lose">Lose</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-of-lists-wrapper">
+                                <div class="scrollable-container">
+                                    <div class="list-item-rows-container ">
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history" name="18872078">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Round ID 24009290">Round ID 24009290</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="04.03.25 15:51:56">04.03.25 15:51:56</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title=" 0.1 Fun"> 0.1 Fun</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="19-65">19-65</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="0 Fun">0 Fun</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history" name="18872073">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Round ID 24009287">Round ID 24009287</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="04.03.25 15:51:42">04.03.25 15:51:42</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title=" 0.1 Fun"> 0.1 Fun</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="19-65">19-65</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="0 Fun">0 Fun</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history" name="18872068">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Round ID 24009284">Round ID 24009284</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="04.03.25 15:51:29">04.03.25 15:51:29</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title=" 0.1 Fun"> 0.1 Fun</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="40-65">40-65</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="0.36 Fun">0.36 Fun</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history" name="18872065">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Round ID 24009282">Round ID 24009282</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="04.03.25 15:51:17">04.03.25 15:51:17</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title=" 0.1 Fun"> 0.1 Fun</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="40-65">40-65</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="0 Fun">0 Fun</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lists-wrapper top-winners" id="Top-Winners">
+                            <div class="bottom-of-lists-wrapper">
+                                <div class="scrollable-container">
+                                    <div class="list-item-rows-container ">
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="1****9">1****9</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="19-73">19-73</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="536.75 FUN">536.75 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="933.94 FUN">933.94 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****2">5****2</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="1-9">1-9</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="58.02 FUN">58.02 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="618.49 FUN">618.49 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="23-40">23-40</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="611.03 FUN">611.03 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="40-58">40-58</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="578.92 FUN">578.92 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="23-41">23-41</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="578.92 FUN">578.92 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="21-39">21-39</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="578.92 FUN">578.92 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="76-94">76-94</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="578.92 FUN">578.92 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="70-89">70-89</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="550.27 FUN">550.27 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="23-43">23-43</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="523.9 FUN">523.9 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="23-43">23-43</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="523.9 FUN">523.9 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="17-37">17-37</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="523.9 FUN">523.9 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="49-69">49-69</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="523.9 FUN">523.9 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="49-69">49-69</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="523.9 FUN">523.9 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="1****1">1****1</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="40-65">40-65</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="139.8 FUN">139.8 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="515.86 FUN">515.86 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="7-28">7-28</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="499.83 FUN">499.83 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="25-47">25-47</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="478.04 FUN">478.04 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="17-39">17-39</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="478.04 FUN">478.04 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="73-96">73-96</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="458.56 FUN">458.56 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="43-66">43-66</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="458.56 FUN">458.56 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-item-row-component ">
+                                            <div class="list-item-history">
+                                                <div class="list-item-history-title">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Player ID">Player ID</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item small">
+                                                        <p class="list-item-history-inner-item-txt big " title="5****8">5****8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet Type">Bet Type</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <div class="bet-type-coef-row">
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out2"></i></div>
+                                                            <p class="bet-type-coef-text" title="33-56">33-56</p>
+                                                            <div class="bet-type-coef-icon down"><i class="ui-lib-out1"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Bet">Bet</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big " title="114.64 FUN">114.64 FUN</p>
+                                                    </div>
+                                                </div>
+                                                <div class="list-item-history-item">
+                                                    <div class="list-item-history-inner-item big">
+                                                        <p class="list-item-history-inner-item-txt big " title="Win">Win</p>
+                                                    </div>
+                                                    <div class="list-item-history-inner-item ">
+                                                        <p class="list-item-history-inner-item-txt big win-color" title="458.56 FUN">458.56 FUN</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-mobile-wr">
+                <div class="mobile-navigation-row ">
+                    <a class="mobile-navigation-row-item" href="index.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/dice-btn-icon.svg" alt="Game"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Game</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item" href="statistics.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-statistics.svg" alt="Statistics"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Statistics</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item active" href="bet.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-bet-color.svg" alt="Bet"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Bet</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="result.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-result.svg" alt="Result"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Result</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="info.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-help.svg" alt="Info"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Info</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="numpad-wr-for-outside-click">
+                <div class="numpad-wrapper ">
+                    <div class="numpad-holder">
+                        <div class="num-head-row-holder">
+                            <div class="numb-calculate-container">
+                                <div class="calc-result-numb-row">
+                                    <div class="calc-result-numb-row-bg">
+                                        <div class="num-head-button-top ">
+                                            <div class="num-head-button-inner"><span class="left-button-item">-</span></div>
+                                        </div>
+                                        <div class="middle-container-numb"><span class="money-text"></span></div>
+                                        <div class="num-head-button-top ">
+                                            <div class="num-head-button-inner"><span class="left-button-item">+</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="num-head-button">
+                                <button class="button" fdprocessedid="0u4e1"> OK</button>
+                            </div>
+                        </div>
+                        <div class="num-button-wrapper">
+                            <div class="num-button-holder">
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">1</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">2</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">3</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">4</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">5</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">6</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">7</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">8</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">9</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">.</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">0</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><i class="ui-lib-backspace boxes-icon"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".view-select-tab").click(function () {
+            var tabID = $(this).attr("data-tab");
+
+            // Remove active class from all tabs and content
+            $(".view-select-tab").removeClass("active");
+            $(".lists-wrapper").removeClass("active");
+
+            // Add active class to clicked tab and corresponding content
+            $(this).addClass("active");
+            $("#" + tabID).addClass("active");
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="is-mobile standart">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Dice">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Dice</title>
+</head>
+
+<body>
+    <div id="root" class="root">
+        <div class="mobile-wr">
+            <div class="top-mobile-wr">
+                <div class="top-row">
+                    <div class="top-row-min-max-block ">
+                        <div class="user-content">
+                            <div class="logo-img">Logo</div>
+                            <div class="user-info">
+                                <div class="user-balance-amount" title="500,000">500,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-row-icon-block ">
+                        <div class="top-row-icon-block-inner right">
+                            <div class="user-profile default">
+                                <div class="user-profile-action"></div>
+                            </div>
+                            <div class="settings-block-wr d-none">
+                                <div class="settings-block">
+                                    <div class="small-coordinator">
+                                        <svg class="avatars-popover-arrow-svg" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="avatars-popover-arrow-svg-path" d="M0.900542 12.75L0.900162 12.75C0.779742 12.7502 0.662114 12.7185 0.560146 12.6591C0.458241 12.5997 0.376363 12.5153 0.322373 12.4158C0.268431 12.3165 0.24406 12.2055 0.251224 12.0948C0.258389 11.984 0.296909 11.8764 0.363584 11.7839L0.363828 11.7835L8.4639 0.496959C8.57563 0.341634 8.77792 0.25 9.00156 0.25C9.22522 0.25 9.42711 0.341628 9.53836 0.496701L9.53839 0.496741L17.638 11.7827C17.6381 11.7829 17.6383 11.7831 17.6384 11.7832C17.7042 11.876 17.7421 11.9834 17.7489 12.0939C17.7557 12.2046 17.7311 12.3155 17.6772 12.4147C17.6232 12.5141 17.5414 12.5985 17.4397 12.658C17.3381 12.7175 17.2208 12.7496 17.1005 12.75C17.1004 12.75 17.1003 12.75 17.1002 12.75L0.900542 12.75Z"
+                                            fill-opacity="1" stroke="url(#arrow-svg-gradient)" stroke-width="0.5"></path>
+                                            <defs>
+                                                <linearGradient id="arrow-svg-gradient" x1="9" y1="0" x2="9" y2="13" gradientUnits="userSpaceOnUse">
+                                                    <stop class="arrow-svg-gradient-stop"></stop>
+                                                    <stop class="arrow-svg-gradient-stop" offset="1" stop-opacity="0"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="settings-block-inner">
+                                        <div class="settings-block-inner-content">
+                                            <div class="settings-block-row">
+                                                <div class="s-bl-row-range-wrp">
+                                                    <p class="inp-range-title">Music</p>
+                                                    <div class="range-music-sec">
+                                                        <input type="range" value="40" min="0" max="100" step="1" class="progress" id="music-range">
+                                                    </div>
+                                                    <!-- <div class="f-c-min-max-line">
+                                                        <input type="range" class="inp-range" min="0" max="1" step="0.1" value="0">
+                                                        <div class="f-c-min-max-line-ins" style="width: 0%;"></div>
+                                                        <div class="f-c-min-max-line-circle-wrp">
+                                                            <div class="f-c-min-max-line-circle-cont">
+                                                                <div class="f-c-min-max-line-circle" style="left: 0%;">
+                                                                    <div class="f-c-min-max-line-circle-holder"><i class="ui-lib-music_off"></i></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                            <div class="settings-block-row">
+                                                <div class="s-bl-row-range-wrp">
+                                                    <p class="inp-range-title">Sound</p>
+                                                    <div class="range-music-sec">
+                                                        <input type="range" value="40" min="0" max="100" step="1" class="progress2" id="sound-range">
+                                                    </div>
+                                                    <!-- <div class="f-c-min-max-line">
+                                                        <input type="range" class="inp-range" min="0" max="1" step="0.1" value="0">
+                                                        <div class="f-c-min-max-line-ins" style="width: 0%;"></div>
+                                                        <div class="f-c-min-max-line-circle-wrp">
+                                                            <div class="f-c-min-max-line-circle-cont">
+                                                                <div class="f-c-min-max-line-circle" style="left: 0%;">
+                                                                    <div class="f-c-min-max-line-circle-holder"><i class="ui-lib-Volume-Off"></i></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                            <div class="settings-block-row">
+                                                <div class="settings-avatars">
+                                                    <p class="settings-avatars-heading" title="Avatars">Avatars</p>
+                                                    <div class="settings-avatars-btn"><i class="ui-lib-edit"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="avatars-popover-holder d-none">
+                                <div class="avatars-popover">
+                                    <div class="avatars-popover-arrow">
+                                        <svg class="avatars-popover-arrow-svg" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="avatars-popover-arrow-svg-path" d="M0.900542 12.75L0.900162 12.75C0.779742 12.7502 0.662114 12.7185 0.560146 12.6591C0.458241 12.5997 0.376363 12.5153 0.322373 12.4158C0.268431 12.3165 0.24406 12.2055 0.251224 12.0948C0.258389 11.984 0.296909 11.8764 0.363584 11.7839L0.363828 11.7835L8.4639 0.496959C8.57563 0.341634 8.77792 0.25 9.00156 0.25C9.22522 0.25 9.42711 0.341628 9.53836 0.496701L9.53839 0.496741L17.638 11.7827C17.6381 11.7829 17.6383 11.7831 17.6384 11.7832C17.7042 11.876 17.7421 11.9834 17.7489 12.0939C17.7557 12.2046 17.7311 12.3155 17.6772 12.4147C17.6232 12.5141 17.5414 12.5985 17.4397 12.658C17.3381 12.7175 17.2208 12.7496 17.1005 12.75C17.1004 12.75 17.1003 12.75 17.1002 12.75L0.900542 12.75Z"
+                                            fill-opacity="1" stroke="url(#arrow-svg-gradient)" stroke-width="0.5"></path>
+                                            <defs>
+                                                <linearGradient id="arrow-svg-gradient" x1="9" y1="0" x2="9" y2="13" gradientUnits="userSpaceOnUse">
+                                                    <stop class="arrow-svg-gradient-stop"></stop>
+                                                    <stop class="arrow-svg-gradient-stop" offset="1" stop-opacity="0"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="avatars-popover-content">
+                                        <div class="avatars-popover-content-title">Choose your avatar</div>
+                                        <div class="popover-avatars">
+                                            <div class="avatar-b av-1 "></div>
+                                            <div class="avatar-b av-2 "></div>
+                                            <div class="avatar-b av-3 "></div>
+                                            <div class="avatar-b av-4 "></div>
+                                            <div class="avatar-b av-5 "></div>
+                                            <div class="avatar-b av-6 "></div>
+                                            <div class="avatar-b av-7 "></div>
+                                            <div class="avatar-b av-8 "></div>
+                                            <div class="avatar-b av-9 "></div>
+                                            <div class="avatar-b av-10 "></div>
+                                            <div class="avatar-b av-11 "></div>
+                                            <div class="avatar-b av-12 "></div>
+                                            <div class="avatar-b av-13 "></div>
+                                            <div class="avatar-b av-14 "></div>
+                                            <div class="avatar-b av-15 "></div>
+                                            <div class="avatar-b av-16 "></div>
+                                            <div class="avatar-b av-17 "></div>
+                                            <div class="avatar-b av-18 "></div>
+                                            <div class="avatar-b av-19 "></div>
+                                            <div class="avatar-b av-20 "></div>
+                                            <div class="avatar-b av-21 "></div>
+                                            <div class="avatar-b av-22 "></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-mobile-wr">
+                <div class="mobile-game_wrapper ">
+                    <div class="game-center-wr">
+                        <div class="game-center-top">
+                            <div class="bets-info-block "><p class="bets-info-block-txt" title="Place your bets">Place your bets</p></div>
+                            <div class="dice-game-wrp">
+                                <div class="dice-g-header">
+                                    <div class="dice-g-h-ins">
+                                        <div class="dice-g-h-inner">
+                                            <div class="dice-g-h-b">
+                                                <div class="int-holder">
+                                                    <div class="dice-number-wrp">
+                                                        <div class="dice-number-item prev">95</div>
+                                                        <div class="dice-number-item ">65</div>
+                                                        <div class="dice-number-item ">36</div>
+                                                        <div class="dice-number-item ">66</div>
+                                                        <div class="dice-number-item ">70</div>
+                                                        <div class="dice-number-item ">78</div>
+                                                        <div class="dice-number-item ">89</div>
+                                                        <div class="dice-number-item ">95</div>
+                                                        <div class="dice-number-item ">38</div>
+                                                        <div class="dice-number-item ">6</div>
+                                                        <div class="dice-number-item ">42</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dice-g-content">
+                                    <div class="id-info-wr">
+                                        <p class="id-info-txt" title="ID:">ID:</p>
+                                        <p class="id-info-number" title="23861414">23861414</p>
+                                    </div>
+                                    <div class="game-dice-top-holder">
+                                        <div class="game-dice-top-ins">
+                                            <div class="game-dice-top-inner">
+                                                <div class="img-wrp">
+                                                  <img class="g-ratio" src="assets/images/game-spin-img.png">
+                                                    <div class="g-d-img-resp rotate-circle">
+                                                        <div class="circle-big ">
+                                                            <div class="circle-big-inside">
+                                                                <div class="circle-big-inside_after" style="animation-delay: 0s; animation-duration: 7s;"></div>
+                                                                <div class="circle-big-ins-bl" style="animation-delay: 3.5s;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="circle-m">
+                                                            <div class="circle-m-inside">
+                                                                <div class="circle-m-ins-bl" style="animation-delay: 6s;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="circle-small">
+                                                            <div class="circle-sm-loader">
+                                                                <div class="circle-small-inside img-animation" style="animation-delay: 0s;">
+                                                                    <div class="circle-small-number-wrp">
+                                                                        <p class="circle-sml-nmb scale-number">95</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pop-you-win-wrp d-none">
+                                <div class="pop-you-win-holder">
+                                    <p class="pop-you-text">Win</p>
+                                    <p class="pop-you-money">0.11 Fun</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-center-bottom">
+                            <div class="selection-block">
+                                <div class="inner-selection-block">
+                                    <div class="inner-selection-block-top">
+                                        <div class="tabs-wrapper-d">
+                                            <div class="tab-item-d active" data-tab="inOut">
+                                                <p class="tab-item-d-txt">In - Out</p>
+                                            </div>
+                                            <div class="tab-item-d " data-tab="underOver">
+                                                <p class="tab-item-d-txt">UNDER - OVER</p>
+                                            </div>
+                                            <div class="tab-item-d " data-tab="range">
+                                                <p class="tab-item-d-txt">Range </p>
+                                            </div>
+                                        </div>
+                                        <div class="inner-selection-tab-content active" id="inOut">
+                                            <div class="input-range-wrp-holder">
+                                                <div class="input-range-wrp">
+                                                    <div class="input-range-holder">
+                                                        <div class="inp-range-inside">
+                                                            <div class="inp-range-row-item">
+                                                                <div class="inp-range-ins-item" data-percet="1"></div>
+                                                                <div class="inp-range-ins-item" data-percet="10"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="20"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="30"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="40"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="50"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="60"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="70"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="80"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="90"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="100"></div>
+                                                            </div>
+                                                            <div class="inp-range-row-loader">
+                                                                <div class="range-number">
+                                                                    <p class="p-number">40-65</p>
+                                                                </div>
+                                                                <div slider id="slider-distance">
+                                                                    <div class="inp-range-row-l-ins">
+                                                                      <div inverse-left style="width:70%;"></div>
+                                                                      <div inverse-right style="width:70%;"></div>
+                                                                      <div range style="left:30%;right:40%;" class="blue"></div>
+                                                                      <div thumb style="left:30%;" class="inp-range-circle left blue-circle"></div>
+                                                                      <div thumb style="left:60%;" class="inp-range-circle right blue-circle"></div>
+                                                                    </div>
+                                                                    <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+                                                                    this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                                                                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                                                    var children = this.parentNode.childNodes[1].childNodes;
+                                                                    children[1].style.width=value+'%';
+                                                                    children[5].style.left=value+'%';
+                                                                    children[7].style.left=value+'%';children[11].style.left=value+'%';
+                                                                    children[11].childNodes[1].innerHTML=this.value;" />
+                                                                  
+                                                                    <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+                                                                    this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                                                                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                                                    var children = this.parentNode.childNodes[1].childNodes;
+                                                                    children[3].style.width=(100-value)+'%';
+                                                                    children[5].style.right=(100-value)+'%';
+                                                                    children[9].style.left=value+'%';children[13].style.left=value+'%';
+                                                                    children[13].childNodes[1].innerHTML=this.value;" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ruler-wrp">
+                                                            <div class="ruler-holder">
+                                                                <div data-ruler-percent="1" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  " style="display: none;"></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="10" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="20" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="30" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="40" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="50" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="60" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item 
+                    active
+                    
+                    "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="70" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="80" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="90" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="" class="ruler-item  "></div>
+                                                                <div data-ruler-percent="100" class="ruler-item  "></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="selection-btns-wr">
+                                                <div class="selection-f-over-under-wr">
+                                                    <button class="over-under-btn type-1 " type="button" fdprocessedid="069jac"><i class="ui-lib-out2"></i><span class="over-under-btn-txt" title="In">In</span><i class="ui-lib-out1"></i></button>
+                                                    <button class="over-under-btn type-2 disabled" type="button" fdprocessedid="eb3cyg"><i class="ui-lib-out1"></i><span class="over-under-btn-txt" title="Out">Out</span><i class="ui-lib-out2"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner-selection-tab-content" id="underOver">
+                                            <div class="input-range-wrp-holder">
+                                                <div class="input-range-wrp">
+                                                    <div class="input-range-holder">
+                                                        <div class="inp-range-inside">
+                                                            <div class="inp-range-row-item">
+                                                                <div class="inp-range-ins-item" data-percet="1"></div>
+                                                                <div class="inp-range-ins-item" data-percet="10"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="20"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="30"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="40"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="50"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="60"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="70"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="80"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="90"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="100"></div>
+                                                            </div>
+                                                            <div class="inp-range-row-loader">
+                                                                <div class="range-number">
+                                                                    <p class="p-number">1-50</p>
+                                                                </div>
+                                                                <div slider id="slider-distance">
+                                                                    <div class="inp-range-row-l-ins">
+                                                                      <div inverse-left style="width:70%;"></div>
+                                                                      <div inverse-right style="width:70%;"></div>
+                                                                      <div range style="left:30%;right:40%;" class="blue"></div>
+                                                                      <div thumb style="left:30%;" class="inp-range-circle left blue-circle"></div>
+                                                                      <div thumb style="left:60%;" class="inp-range-circle right blue-circle"></div>
+                                                                    </div>
+                                                                    <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+                                                                    this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                                                                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                                                    var children = this.parentNode.childNodes[1].childNodes;
+                                                                    children[1].style.width=value+'%';
+                                                                    children[5].style.left=value+'%';
+                                                                    children[7].style.left=value+'%';children[11].style.left=value+'%';
+                                                                    children[11].childNodes[1].innerHTML=this.value;" />
+                                                                  
+                                                                    <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+                                                                    this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                                                                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                                                    var children = this.parentNode.childNodes[1].childNodes;
+                                                                    children[3].style.width=(100-value)+'%';
+                                                                    children[5].style.right=(100-value)+'%';
+                                                                    children[9].style.left=value+'%';children[13].style.left=value+'%';
+                                                                    children[13].childNodes[1].innerHTML=this.value;" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ruler-wrp">
+                                                            <div class="ruler-holder">
+                                                                <div data-ruler-percent="1" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active" style="display: none;"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="10" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="20" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="30" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="40" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="50" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="60" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="70" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="80" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="90" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="" class="ruler-item"></div>
+                                                                <div data-ruler-percent="100" class="ruler-item"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="selection-btns-wr">
+                                                <div class="selection-f-over-under-wr">
+                                                    <button class="over-under-btn type-1 " type="button"><i class="ui-lib-ander"></i><span class="over-under-btn-txt" title="UNDER">UNDER</span></button>
+                                                    <button class="over-under-btn type-2 disabled" type="button"><i class="ui-lib-over"></i><span class="over-under-btn-txt" title="OVER">OVER</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="inner-selection-tab-content" id="range">
+                                            <div class="input-range-wrp-holder">
+                                                <div class="input-range-wrp">
+                                                    <div class="input-range-holder">
+                                                        <div class="inp-range-inside">
+                                                            <div class="inp-range-row-item">
+                                                                <div class="inp-range-ins-item" data-percet="1"></div>
+                                                                <div class="inp-range-ins-item" data-percet="10"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="20"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="30"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="40"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="50"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="60"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="70"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="80"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="90"></div>
+                                                                <div class="inp-range-ins-item" data-percet=""></div>
+                                                                <div class="inp-range-ins-item" data-percet="100"></div>
+                                                            </div>
+                                                            <div class="inp-range-row-loader">
+                                                                <div class="range-number"></div>
+                                                                <div slider id="slider-distance">
+                                                                    <div class="inp-range-row-l-ins">
+                                                                      <div inverse-left style="width:70%;"></div>
+                                                                      <div inverse-right style="width:70%;"></div>
+                                                                      <div range style="left:30%;right:40%;" class="blue"></div>
+                                                                      <div thumb style="left:30%;" class="inp-range-circle left blue-circle"></div>
+                                                                      <div thumb style="left:60%;" class="inp-range-circle right blue-circle"></div>
+                                                                    </div>
+                                                                    <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+                                                                    this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                                                                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                                                    var children = this.parentNode.childNodes[1].childNodes;
+                                                                    children[1].style.width=value+'%';
+                                                                    children[5].style.left=value+'%';
+                                                                    children[7].style.left=value+'%';children[11].style.left=value+'%';
+                                                                    children[11].childNodes[1].innerHTML=this.value;" />
+                                                                  
+                                                                    <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+                                                                    this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                                                                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                                                                    var children = this.parentNode.childNodes[1].childNodes;
+                                                                    children[3].style.width=(100-value)+'%';
+                                                                    children[5].style.right=(100-value)+'%';
+                                                                    children[9].style.left=value+'%';children[13].style.left=value+'%';
+                                                                    children[13].childNodes[1].innerHTML=this.value;" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ruler-wrp">
+                                                            <div class="ruler-holder">
+                                                                <div data-ruler-percent="1" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active" style="display: none;"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="10" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="20" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item active"></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="30" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="40" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="50" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="60" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="70" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="80" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="90" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="" class="ruler-item "></div>
+                                                                <div data-ruler-percent="100" class="ruler-item "></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="selection-btns-wr">
+                                                <div class="selection-f-range-wr">
+                                                    <button type="button" class="range-btn  "><span class="range-btn-txt">1 - 25</span></button>
+                                                    <button type="button" class="range-btn disabled "><span class="range-btn-txt">25 - 50</span></button>
+                                                    <button type="button" class="range-btn disabled "><span class="range-btn-txt">50 - 75</span></button>
+                                                    <button type="button" class="range-btn disabled "><span class="range-btn-txt">75 - 100</span></button>
+                                                    <div class="range-btn btn-res"><i class="ui-lib-bc-i-resset"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inner-selection-block-bottom">
+                                        <div class="info-block-selection-block">
+                                            <div class="info-block-selection-block-item">
+                                                <p class="info-block-selection-block-item-txt">Chance:</p>
+                                                <p class="info-block-selection-block-item-numb">26%</p>
+                                            </div>
+                                            <div class="info-block-selection-block-item ">
+                                                <p class="info-block-selection-block-item-txt">Odd:</p>
+                                                <p class="info-block-selection-block-item-numb">x3.84</p>
+                                            </div>
+                                            <div class="info-block-selection-block-item strong">
+                                                <p class="info-block-selection-block-item-txt">Payout:</p>
+                                                <p class="info-block-selection-block-item-numb">0.38 Fun</p>
+                                            </div>
+                                        </div>
+                                        <div class="bet-bts-wr">
+                                            <div class="bet-bts-wr-left">
+                                                <div class="bet-bts-wr-left-inner ">
+                                                    <div class="bet-bts-wr-left-item">
+                                                        <button class="bet-bts-wr-left-item-btn" type="button" fdprocessedid="klczz"><span class="bet-bts-wr-left-item-btn-txt"><i class="ui-lib-minus"></i></span></button>
+                                                    </div>
+                                                    <div class="bet-bts-wr-left-item">
+                                                        <input type="text" maxlength="9" autocomplete="off" readonly="" title="0.1" class="bet-bts-wr-left-item-inp" inputmode="none" value="0.1" fdprocessedid="yclubr">
+                                                    </div>
+                                                    <div class="bet-bts-wr-left-item">
+                                                        <button class="bet-bts-wr-left-item-btn" type="button" fdprocessedid="il0upp"><span class="bet-bts-wr-left-item-btn-txt"><i class="ui-lib-plus"></i></span></button>
+                                                    </div>
+                                                    <div class="bet-bts-wr-left-item">
+                                                        <button type="button" class="bet-bts-wr-left-item-btn disabled" fdprocessedid="uewxp"><span class="bet-bts-wr-left-item-btn-txt">Min</span></button>
+                                                    </div>
+                                                    <div class="bet-bts-wr-left-item">
+                                                        <button type="button" class="bet-bts-wr-left-item-btn " fdprocessedid="r91ln"><span class="bet-bts-wr-left-item-btn-txt">x3</span></button>
+                                                    </div>
+                                                    <div class="bet-bts-wr-left-item">
+                                                        <button type="button" class="bet-bts-wr-left-item-btn " fdprocessedid="7n0v4u"><span class="bet-bts-wr-left-item-btn-txt">1/2</span></button>
+                                                    </div>
+                                                    <div class="bet-bts-wr-left-item">
+                                                        <button type="button" class="bet-bts-wr-left-item-btn " fdprocessedid="7xi1s"><span class="bet-bts-wr-left-item-btn-txt">x2</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bet-bts-wr-right">
+                                                <button class="bet-btn-d active pulsation " type="button" fdprocessedid="hu9h1e"><span class="bet-btn-d-txt" title="Bet">Bet</span><span class="bet-btn-d-small-txt"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-mobile-wr">
+                <div class="mobile-navigation-row ">
+                    <a class="mobile-navigation-row-item active" href="index.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/dice-btn-icon-color.svg" alt="Game"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Game</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="statistics.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-statistics.svg" alt="Statistics"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Statistics</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="bet.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-bet.svg" alt="Bet"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Bet</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="result.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-result.svg" alt="Result"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Result</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="info.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-help.svg" alt="Info"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Info</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="numpad-wr-for-outside-click">
+                <div class="numpad-wrapper ">
+                    <div class="numpad-holder">
+                        <div class="num-head-row-holder">
+                            <div class="numb-calculate-container">
+                                <div class="calc-result-numb-row">
+                                    <div class="calc-result-numb-row-bg">
+                                        <div class="num-head-button-top ">
+                                            <div class="num-head-button-inner"><span class="left-button-item">-</span></div>
+                                        </div>
+                                        <div class="middle-container-numb"><span class="money-text"></span></div>
+                                        <div class="num-head-button-top ">
+                                            <div class="num-head-button-inner"><span class="left-button-item">+</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="num-head-button">
+                                <button class="button" fdprocessedid="0u4e1"> OK</button>
+                            </div>
+                        </div>
+                        <div class="num-button-wrapper">
+                            <div class="num-button-holder">
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">1</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">2</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">3</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">4</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">5</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">6</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">7</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">8</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">9</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">.</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">0</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><i class="ui-lib-backspace boxes-icon"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".tab-item-d").click(function () {
+                var tabID = $(this).attr("data-tab");
+
+                // Remove active class from all tabs and content
+                $(".tab-item-d").removeClass("active");
+                $(".inner-selection-tab-content").removeClass("active");
+
+                // Add active class to clicked tab and corresponding content
+                $(this).addClass("active");
+                $("#" + tabID).addClass("active");
+            });
+
+            $(".user-profile").click(function(){
+                $(".settings-block-wr").toggle();
+                $(".avatars-popover-holder").hide();
+            })
+
+            $(".settings-avatars-btn").click(function(){
+                $(".avatars-popover-holder").show();
+            })
+        });
+
+        const progress = document.querySelector('.progress');
+  
+        progress.addEventListener('input', function() {
+        const value = this.value;
+        this.style.background = `linear-gradient(to right, #503a86 0%, #503a86 ${value}%, #0000 ${value}%, #0000 100%)`
+        })
+
+        const progress2 = document.querySelector('.progress2');
+  
+        progress2.addEventListener('input', function() {
+        const value = this.value;
+        this.style.background = `linear-gradient(to right, #503a86 0%, #503a86 ${value}%, #0000 ${value}%, #0000 100%)`
+        })
+    </script>
+   
+
+   
+
+</body>
+</html>

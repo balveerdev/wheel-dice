@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="is-mobile standart">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Dice">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Dice</title>
+</head>
+<body>
+    <div id="root" class="root">
+        <div class="mobile-wr">
+            <div class="top-mobile-wr">
+                <div class="top-row">
+                    <div class="top-row-min-max-block ">
+                        <div class="user-content">
+                            <div class="logo-img">Logo</div>
+                            <div class="user-info">
+                                <div class="user-balance-amount" title="500,000">500,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-row-icon-block ">
+                        <div class="top-row-icon-block-inner right">
+                            <div class="user-profile default">
+                                <div class="user-profile-action"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-mobile-wr">
+                <div class="lists-wrapper statistics">
+                    <div class="top-of-lists-wrapper">
+                        <div class="lists-title-filter-row ">
+                            <div class="lists-title-row-filter-item">
+                                <p class="lists-title-row-filter-item-txt" title=""><i class="all-statistics ui-lib-all-sort "></i></p>
+                            </div>
+                            <div class="d-f-custom">
+                                <div class="lists-title-row-item">
+                                    <p class="lists-title-row-item-txt" title="Last Rounds">Last Rounds</p>
+                                </div>
+                                <div class="lists-title-row-filter-item active">
+                                    <p class="lists-title-row-filter-item-txt" title="">100</p>
+                                </div>
+                                <div class="lists-title-row-filter-item">
+                                    <p class="lists-title-row-filter-item-txt" title="">200</p>
+                                </div>
+                                <div class="lists-title-row-filter-item">
+                                    <p class="lists-title-row-filter-item-txt" title="">500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-of-lists-wrapper">
+                        <div class="scrollable-container">
+                            <div class="statistics-block">
+                                <div class="statistics-block-items"><span class="items-number">1</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">2</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">3</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">4</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">5</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">6</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">7</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                    </div><span class="items-percent">3%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">8</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">9</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">10</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">11</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">12</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">13</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">14</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">15</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">16</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                    </div><span class="items-percent">3%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">17</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">18</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">19</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">20</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">21</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">22</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">23</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">24</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">25</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">26</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">27</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">28</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">29</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">30</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">31</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">32</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">33</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">34</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">35</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">36</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">37</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">38</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">39</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">40</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">41</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">42</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">43</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">44</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">45</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">46</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">47</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">48</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">49</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">50</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">51</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">52</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">53</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 3.2%;"></span></div>
+                                    </div><span class="items-percent">4%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">54</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">55</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">56</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">57</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">58</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">59</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">60</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">61</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">62</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">63</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">64</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">65</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">66</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">67</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">68</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">69</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">70</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">71</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">72</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">73</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">74</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">75</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">76</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">77</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">78</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">79</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">80</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">81</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">82</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 3.2%;"></span></div>
+                                    </div><span class="items-percent">4%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">83</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">84</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">85</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">86</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">87</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                    </div><span class="items-percent">3%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">88</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">89</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 2.4%;"></span></div>
+                                    </div><span class="items-percent">3%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">90</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 3.2%;"></span></div>
+                                    </div><span class="items-percent">4%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">91</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">92</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">93</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">94</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">95</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">96</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0.8%;"></span></div>
+                                    </div><span class="items-percent">1%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">97</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">98</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 1.6%;"></span></div>
+                                    </div><span class="items-percent">2%</span></div>
+                                <div class="statistics-block-items"><span class="items-number">99</span>
+                                    <div class="items-loading">
+                                        <div class="items-loading-title"><span class="loading-percent" style="width: 0%;"></span></div>
+                                    </div><span class="items-percent">0%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-mobile-wr">
+                <div class="mobile-navigation-row ">
+                    <a class="mobile-navigation-row-item" href="index.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/dice-btn-icon.svg" alt="Game"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Game</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item active" href="statistics.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-statistics-color.svg" alt="Statistics"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Statistics</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="bet.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-bet.svg" alt="Bet"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Bet</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="result.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-result.svg" alt="Result"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Result</p>
+                        </div>
+                    </a>
+                    <a class="mobile-navigation-row-item " href="info.html">
+                        <div class="mobile-navigation-row-item-top"><img class="menu-img" src="assets/images/menu-help.svg" alt="Info"></div>
+                        <div class="mobile-navigation-row-item-bottom">
+                            <p class="mobile-navigation-row-item-txt">Info</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="numpad-wr-for-outside-click">
+                <div class="numpad-wrapper ">
+                    <div class="numpad-holder">
+                        <div class="num-head-row-holder">
+                            <div class="numb-calculate-container">
+                                <div class="calc-result-numb-row">
+                                    <div class="calc-result-numb-row-bg">
+                                        <div class="num-head-button-top ">
+                                            <div class="num-head-button-inner"><span class="left-button-item">-</span></div>
+                                        </div>
+                                        <div class="middle-container-numb"><span class="money-text"></span></div>
+                                        <div class="num-head-button-top ">
+                                            <div class="num-head-button-inner"><span class="left-button-item">+</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="num-head-button">
+                                <button class="button" fdprocessedid="0u4e1"> OK</button>
+                            </div>
+                        </div>
+                        <div class="num-button-wrapper">
+                            <div class="num-button-holder">
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">1</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">2</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">3</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">4</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">5</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">6</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">7</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">8</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">9</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">.</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><span class="boxes-text">0</span></div>
+                                </div>
+                                <div class="nub-buttons">
+                                    <div class="nub-buttons-inner"><i class="ui-lib-backspace boxes-icon"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
