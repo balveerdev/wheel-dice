@@ -206,10 +206,15 @@ useEffect(() => {
 
  },[phase]);
 
+// function setRealHeight() {
+//   const vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty("--vh", `${vh}px`);
+// }
+// setRealHeight();
+// window.addEventListener("resize", setRealHeight);
 
 
   return (
-    <div>
         <div className="middle-mobile-wr">
                         <div className="mobile-game_wrapper ">
                             <div className="game-center-wr">
@@ -390,7 +395,7 @@ useEffect(() => {
                          style={{ display: 'none' }}/>
     </div>
     </div>
-    </div>
+
   )
 }
 

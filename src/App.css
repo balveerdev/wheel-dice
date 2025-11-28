@@ -809,7 +809,7 @@ html.is-mobile .chat-content {
 .svg-hover .shield-border {
   box-shadow: 0 0 6px #44d;
 }
-.mobile-wr {
+/* .mobile-wr {
   grid-gap: 0;
   display: grid;
   grid-template-areas: "top" "middle" "bottom";
@@ -818,14 +818,10 @@ html.is-mobile .chat-content {
   height: 100%;
   width: 100%;
   /* max-width: 576px; */
-  margin: 0 auto;
-  max-width: 768px;
-}
-.top-mobile-wr {
-  grid-area: top;
-  min-width: 0;
-  position: relative;
-}
+  /* margin: 0 auto; */
+  /* max-width: 768px;
+} */ 
+
 [class*="is-mobile"] .top-mobile-wr {
   padding: 0.3rem 0.3rem 0;
 }
@@ -854,39 +850,63 @@ html.is-mobile .chat-content {
   height: 100%;
   min-width: 0;
 }
-.middle-mobile-wr,
+ .middle-mobile-wr,
 .mobile-game_wrapper {
-  overflow: hidden;
-  position: relative;
   width: 100%;
   max-width: 768px;
   margin: 0 auto;
-  height: 42dvh;   
+  flex: 1 1 auto;
+  overflow: hidden;
+  position: relative;
+   display: flex;
+  flex-direction: column; 
+} 
+
+.app-wrapper {
+  height: calc(var(--vh) * 100);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* ≥ 640px — Small / Tablet */
-@media (min-width: 640px) {
-  .middle-mobile-wr,
-  .mobile-game_wrapper {
-    height: 50dvh;
-  }
+.top-mobile-wr {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.middle-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.game-center{
+  width: 100%;
+  /* height: 80%; */
+  max-width: 768px;
+  margin: 0 auto;
+  /* flex: 1 1 auto;     */
+  /* overflow: hidden;  */
+  position: relative;
 }
 
-/* ≥ 768px — Medium / Landscape tablets */
-@media (min-width: 768px) {
-  .middle-mobile-wr,
-  .mobile-game_wrapper {
-    height: 59dvh;
-  }
+.bottom-mobile-wr {
+  grid-area: bottom;
+  min-width: 0;
+  /* position: relative; */
+  z-index: 111;
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  /* height: 100%; */
+  flex: 0 0 auto;
 }
 
-/* ≥ 1024px — Large screens / Laptop */
-@media (min-width: 1024px) {
-  .middle-mobile-wr,
-  .mobile-game_wrapper {
-    height: 55lvh;
-  }
-}
+
 
 .headerNote {
     display: none;
@@ -913,7 +933,7 @@ html.is-mobile .chat-content {
   overflow: hidden;
   position: relative;
   width:100%;
-  height: 83.9dvh;
+  /* height: 83.9dvh; */
   max-width: 768px;
   margin: 0 auto;
 }
@@ -922,7 +942,7 @@ html.is-mobile .chat-content {
   overflow: hidden;
   position: relative;
   width:100%;
-  height: 83.9vh;
+  /* height: 83.9vh; */
   max-width: 768px;
   margin: 0 auto;
 }
@@ -931,7 +951,7 @@ html.is-mobile .chat-content {
   overflow: hidden;
   position: relative;
   width:100%;
-  height: 83.9vh;
+  /* height: 83.9vh; */
   max-width: 768px;
   margin: 0 auto;
 
@@ -941,7 +961,7 @@ html.is-mobile .chat-content {
   overflow: hidden;
   position: relative;
   width:100%;
-  height: 83.9vh;
+  /* height: 83.9vh; */
   max-width: 768px;
   margin: 0 auto;
 
@@ -952,44 +972,10 @@ html.is-mobile .chat-content {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  height: 83dvh; /* default for small screen */
+  /* height: 83dvh;  */
   max-width: 768px;
 }
 
-/* Tablet (SM) */
-@media (min-width: 640px) {
-  .middle-mobile-wrapper, .middle-mobile-wrstat,
-  .middle-mobile-wrres, .middle-mobile-wrbet, .middle-mobile-wrinf {
-    height: 80dvh;
-  }
-}
-
-/* Medium (MD) */
-@media (min-width: 768px) {
-  .middle-mobile-wrapper, .middle-mobile-wrstat,
-  .middle-mobile-wrres, .middle-mobile-wrbet, .middle-mobile-wrinf {
-    height: 84dvh;
-  }
-}
-
-/* Laptop (LG) */
-@media (min-width: 1024px) {
-  .middle-mobile-wrapper, .middle-mobile-wrstat,
-  .middle-mobile-wrres, .middle-mobile-wrbet, .middle-mobile-wrinf {
-    height: 83.9vh;
-  }
-}
-
-.bottom-mobile-wr {
-  grid-area: bottom;
-  min-width: 0;
-  position: relative;
-  z-index: 111;
-  max-width: 768px;
-  width: 100%;
-  margin: 0 auto;
-  height: 100%;
-}
 
 /* SplashScreen.css */
 .splash-wrapper {
@@ -8858,12 +8844,7 @@ body {
 .settings-block-inner:before {
   display: none;
 }
-.game-center{
-  width: 100%;
-  height: 100%;
-  max-width: 768px;
-  margin: 0 auto;
-}
+
 .game-center-wr {
   background: url(/images/game-bg.2b37b7db2c3e43deae0e.jpg) no-repeat
     50% 0%/100% 190%;
@@ -8877,6 +8858,9 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  flex: 1 1 auto;   
+  overflow: hidden; 
+  position: relative;
 }
 .game-center-wr.hide {
   opacity: 0;

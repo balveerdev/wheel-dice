@@ -25,6 +25,13 @@ const App = () => {
   const [history, setHistory] = useState([]);
   const [roundId, setRoundId] = useState(null);
 
+  function setRealHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+setRealHeight();
+window.addEventListener("resize", setRealHeight);
+
   
   // Splash timeout
   useEffect(() => {
@@ -104,6 +111,7 @@ const App = () => {
       {showSplash ? (
         <SplashScreen />
       ) : (
+        <div className="app-wrapper"> 
         <BrowserRouter>
           <Header
             handleSoundChange={handleSoundChange}
@@ -111,6 +119,7 @@ const App = () => {
             balance={balance}
             soundVolume={soundVolume}
           />
+           <div className="middle-content">
           <Routes>
             <Route path='/' element={
               <Game
@@ -135,8 +144,10 @@ const App = () => {
             <Route path='result' element={<Result />} />
             <Route path='info' element={<Info />} />
           </Routes>
+          </div>
           <Footer />
         </BrowserRouter>
+        </div>
       )}
     </>
   );
